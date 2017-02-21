@@ -11,4 +11,6 @@ import scrapy
 class SongspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    singer = scrapy.Field()
+    name = scrapy.Field()
+    lrc = scrapy.Field()
