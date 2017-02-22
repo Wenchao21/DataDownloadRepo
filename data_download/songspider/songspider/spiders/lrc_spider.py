@@ -1,6 +1,6 @@
 
 from scrapy import Spider
-from songspider.items import SongspiderItem
+from ..items import SongspiderItem
 class LrcSpider(Spider):
     name = 'lrcspider'
     start_url = [
