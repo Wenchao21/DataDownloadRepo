@@ -4,12 +4,13 @@ from ..items import SongspiderItem
 
 class LrcSpider(Spider):
     name = 'lrcspider'
-    allowed_domains = ["gushici.org"]
     start_url = [
         "http://so.gushiwen.org/type.aspx?p=1"
     ]
 
     def parse(self, response):
-        item1 = SongspiderItem()
-        item1['name'] = "wenchao...."
-        yield item
+        poetry = SongspiderItem()
+        poetry['poetry_name'] = "wenchao...."
+        poetry['author_name'] = "author name test"
+        poetry['author_decade'] = "Tang"
+        yield poetry
