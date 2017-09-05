@@ -4,7 +4,7 @@ from ..items import SongspiderItem
 
 class LrcSpider(Spider):
     name = 'lrcspider'
-    start_url = [
+    start_urls = [
         "http://so.gushiwen.org/type.aspx?p=1"
     ]
 
