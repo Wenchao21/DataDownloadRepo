@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-scrapy crawl lrcspider -o result.json
+scrapy crawl lrcspider -o result.csv

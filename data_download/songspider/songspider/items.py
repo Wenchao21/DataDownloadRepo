@@ -14,3 +14,4 @@ class SongspiderItem(scrapy.Item):
     poetry_name = scrapy.Field()
     author_name = scrapy.Field()
     author_decade = scrapy.Field()
+    poetry_comments = scrapy.Field()
