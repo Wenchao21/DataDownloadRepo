@@ -31,7 +31,6 @@ class LrcSpider(Spider):
             poetry['poetry_comments'] = pcd[i]
             yield poetry
 
-
         if pd and pd[0] == "下一页":
             url = baseurl + pages_data[0]
             yield Request(url, callback=self.parse)
