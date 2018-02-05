@@ -1,3 +1,4 @@
+#coding=utf-8
 from scrapy import Spider
 from ..items import SongspiderItem
 from scrapy import Request
