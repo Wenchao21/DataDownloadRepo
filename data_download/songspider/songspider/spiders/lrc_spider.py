@@ -1,3 +1,4 @@
+#coding=utf-8
 from scrapy import Spider
 from ..items import SongspiderItem
 
@@ -10,7 +11,8 @@ class LrcSpider(Spider):
 
     def parse(self, response):
         poetry = SongspiderItem()
-        poetry['poetry_name'] = "wenchao...."
-        poetry['author_name'] = "author name test"
+        poetry['poetry_name'] = u"wenchao...李白"
+        poetry['poetry_comments'] = str(response.selector.xpath('//span/text()').extract()).encode('UTF-8')
+        poetry['author_name'] = response
         poetry['author_decade'] = "Tang"
         yield poetry

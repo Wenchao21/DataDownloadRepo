@@ -12,5 +12,6 @@ class SongspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     poetry_name = scrapy.Field()
+    poetry_comments = scrapy.Field()
     author_name = scrapy.Field()
     author_decade = scrapy.Field()
