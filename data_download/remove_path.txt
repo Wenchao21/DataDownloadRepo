@@ -1,3 +1,0 @@
-The file just remove the data_download/songspider's '/' bite. No others function.
-
-Please don't be care!

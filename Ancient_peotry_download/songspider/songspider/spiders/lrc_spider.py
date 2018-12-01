@@ -11,14 +11,6 @@ class LrcSpider(Spider):
     ]
 
     def parse(self, response):
-<<<<<<< HEAD
-        poetry = SongspiderItem()
-        poetry['poetry_name'] = u"wenchao...李白"
-        poetry['poetry_comments'] = str(response.selector.xpath('//span/text()').extract()).encode('UTF-8')
-        poetry['author_name'] = response
-        poetry['author_decade'] = "Tang"
-        yield poetry
-=======
         baseurl = "http://so.gushiwen.org"
         poetry_name_data = response.xpath('//div[@class="left"]//div[@class="sons"]//div[@class="cont"]//b')
         poetry_author_name = response.xpath('//div[@class="left"]//div[@class="sons"]//div[@class="cont"]//p[@class="source"]//a[2]')
@@ -43,4 +35,3 @@ class LrcSpider(Spider):
         if pd and pd[0] == "下一页":
             url = baseurl + pages_data[0]
             yield Request(url, callback=self.parse)
->>>>>>> fc253c420609c247013a4bbbe0c32f3a00f6e726
